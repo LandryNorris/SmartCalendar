@@ -1,6 +1,5 @@
 package com.smartcalendar;
 
-import java.time.Instant;
 import java.util.Date;
 
 public class Main {
@@ -9,7 +8,7 @@ public class Main {
 		UIManager.openNew();
 		
 		
-		Event event = new Event(new Date(),15,0,"Test","Hello",0);
+		Event event = new Event(new Date(),15,0,"Test","Hello","Work");
 		event.addRepeatDay(Event.SUNDAY);
 		event.addRepeatDay(Event.WEDNESDAY);
 		event.addRepeatDay(Event.SATURDAY);

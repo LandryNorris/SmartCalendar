@@ -21,7 +21,7 @@ public class Event {
 	static final int PRIORITY_HIGH=10000;
 	static final int PRIORITY_MEDIUM=1000;
 	static final int PRIORITY_LOW=100;
-	static final int PRIORITY_DYNAMIC=0;
+	static final int PRIORITY_OVERLAP=0;
 	
 	
 	
@@ -30,8 +30,13 @@ public class Event {
 	int priority;
 	String name;
 	String description;
-	int type;
+	String type;
 	byte days = 0;
+	
+	
+	///Possible additional parameters
+	boolean mergable;
+	boolean splittable;
 
 	
 	/**
@@ -43,7 +48,7 @@ public class Event {
 	 * @param description
 	 * @param type
 	 */
-	public Event(Date start, int duration, int priority, String name, String description, int type) {
+	public Event(Date start, int duration, int priority, String name, String description, String type) {
 		this.start = start;
 		this.end = new Date(start.getTime() + duration * 60000);
 		this.priority = priority;
