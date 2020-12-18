@@ -1,4 +1,7 @@
 *
-!src/
+!src
+!src/com
+!src/com/smartcalendar
+!src/com/smartcalendar/*
 !LICENSE
 !README
